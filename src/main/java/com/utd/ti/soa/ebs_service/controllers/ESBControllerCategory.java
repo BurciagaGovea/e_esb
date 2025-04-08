@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/esb/categories")
 public class ESBControllerCategory {
 
-    private final WebClient webClient = WebClient.create("http://products_service:3000/api/categories");
+    private final WebClient webClient = WebClient.create("http://e_products.railway.internal:3000/api/categories");
     private final Auth auth = new Auth();
 
     @GetMapping

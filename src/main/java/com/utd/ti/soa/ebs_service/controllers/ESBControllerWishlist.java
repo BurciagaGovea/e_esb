@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/esb/wishlist")
 public class ESBControllerWishlist {
 
-    private final WebClient webClient = WebClient.create("http://orders_service:3000/wishlist");
+    private final WebClient webClient = WebClient.create("http://e_orders.railway.internal:3000/wishlist");
     private final Auth auth = new Auth();
 
     @GetMapping("/{user_id}")

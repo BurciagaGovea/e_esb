@@ -17,7 +17,7 @@ import java.io.IOException;
 public class ESBControllerProductUpload {
 
     // private final String productServiceUrl = "http://localhost:5000/api/products/products";
-    private final String productServiceUrl = "http://products_service:3000/api/products/products";
+    private final String productServiceUrl = "http://e_products.railway.internal:3000/api/products/products";
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> createProduct(
