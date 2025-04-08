@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/esb/users")
 public class ESBControllerUser {
 
-    private final WebClient webClient = WebClient.create("http://users_service:3000/api/users");
+    private final WebClient webClient = WebClient.create("http://e_users.railway.internal:3000/api/users");
     private final Auth auth = new Auth();
 
     @PostMapping("/create")
