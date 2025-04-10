@@ -16,11 +16,10 @@ public class ESBControllerUser {
     private final Auth auth = new Auth();
 
     @PostMapping("/create")
-    public Mono<ResponseEntity<String>> createUser(@RequestBody UserClientRequest data,
-                                                   @RequestHeader(HttpHeaders.AUTHORIZATION) String token) {
-        if (!auth.validateToken(token)) {
-            return Mono.just(ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token inválido"));
-        }
+    public Mono<ResponseEntity<String>> createUser(@RequestBody UserClientRequest data) {
+        // if (!auth.validateToken(token)) {
+        //     return Mono.just(ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token inválido"));
+        // }
 
         return webClient.post()
                 .uri("/create")
